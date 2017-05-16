@@ -1,0 +1,188 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Didjecte - Manga</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<link rel="stylesheet" type="text/css" href="css/sourcesanspro.css" />
+	<link rel="stylesheet" type="text/css" href="css/opensanscondensed.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css" />
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+</head>
+
+<body>
+		<header>
+			<!-- logo -->
+			<a href="index.html"><img src="images/logo.png" id="img_gallery" style="height:70px; margin-top:5px" /></a>
+			
+			<!-- gallerie -->
+			<menu>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="manga.html" class="active-page">Manga</a></li>
+					<li><a href="auteur.html">Mot de l'auteur</a></li>
+					<li><a href="encyclopedie.html">Encyclopédie</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li id="recherche"><a id="recherche-a" onclick="clickRecherche()"><img src="images/loupe.png" height="15px" /></a></li>
+					<li id="recherche-deroule">
+						<script>
+  							(function() {
+ 							var cx = '007051934125326888592:u3xfemtxfxo';
+    						var gcse = document.createElement('script');
+  					  		gcse.type = 'text/javascript';
+    						gcse.async = true;
+    						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+    	    				'//cse.google.com/cse.js?cx=' + cx;
+    						var s = document.getElementsByTagName('script')[0];
+    						s.parentNode.insertBefore(gcse, s);
+  							})();
+						</script>
+						<gcse:search></gcse:search>
+					</li>
+				</ul>
+			</menu>
+		</header>
+	
+		<div id="main"> <!-- ============= MAIN ============= -->			
+			<h2>Manga</h2>
+			<p>Cliquez sur le chapitre ou la page que vous voulez pour commencer la lecture !</p>
+			
+			<table id="chapSelect" align="center">
+				<tr> <!-- ligne 1 = chap 1,2,3-->
+					<td style="border-right: 1px solid rgba(180,180,180,0);">
+						<h2>Chapitre 1</h2>
+						<form>
+							<select name="pageSelect" onchange="pageChapterSelect(this);" onfocus="this.blur()">
+								<option value="chp1_p1" selected="selected">Page 1</option>
+								<option value="chp1_p2">Page 2</option>
+								<option value="chp1_p3">Page 3</option>
+								<option value="chp1_p4">Page 4</option>
+								<option value="chp1_p5">Page 5</option>
+								<option value="chp1_p6">Page 6</option>
+								<option value="chp1_p7">Page 7</option>
+								<option value="chp1_p8">Page 8</option>
+								<option value="chp1_p9">Page 9</option>
+								<option value="chp1_p10">Page 10</option>
+								<option value="chp1_p11">Page 11</option>
+								<option value="chp1_p12">Page 12</option>
+								<option value="chp1_p13">Page 13</option>
+								<option value="chp1_p14">Page 14</option>
+								<option value="chp1_p15">Page 15</option>
+								<option value="chp1_p16">Page 16</option>
+								<option value="chp1_p17">Page 17</option>
+								<option value="chp1_p18">Page 18</option>
+								<option value="chp1_p19">Page 19</option>
+								<option value="chp1_p20">Page 20</option>
+								<option value="chp1_p21">Page 21</option>
+								<option value="chp1_p22">Page 22</option>
+								<option value="chp1_p23">Page 23</option>
+								<option value="chp1_p24">Page 24</option>
+							</select>
+						</form>
+						
+						<div class="chapPreview">
+							<a href="chap/chp1/chp1_p1.html"><br /><br /><br /><br /><br /><br />Cliquez pour commencer la lecture de ce chapitre.</a>
+							<img class="chapPreview" src="images/chapPreview/chp1.jpg" />
+						</div>
+					</td>
+					<td style="border-right: 1px solid rgba(180,180,180,0);">
+						<h2>Chapitre 2</h2>
+						<form>
+							<select style="height=30px" name="pageSelect" onchange="pageChapterSelect(this);" onfocus="this.blur()">
+								<option value="chp2_p1" selected="selected">Page 1</option>
+								<option value="chp2_p2">Page 2</option>
+								<option value="chp2_p3">Page 3</option>
+								<option value="chp2_p4">Page 4</option>
+								<option value="chp2_p5">Page 5</option>
+								<option value="chp2_p6">Page 6</option>
+								<option value="chp2_p7">Page 7</option>
+								<option value="chp2_p8">Page 8</option>
+								<option value="chp2_p9">Page 9</option>
+								<option value="chp2_p10">Page 10</option>
+								<option value="chp2_p11">Page 11</option>
+								<option value="chp2_p12">Page 12</option>
+								<option value="chp2_p13">Page 13</option>
+								<option value="chp2_p14">Page 14</option>
+								<option value="chp2_p15">Page 15</option>
+								<option value="chp2_p16">Page 16</option>
+								<option value="chp2_p17">Page 17</option>
+								<option value="chp2_p18">Page 18</option>
+								<option value="chp2_p19">Page 19</option>
+								<option value="chp2_p20">Page 20</option>
+								<option value="chp2_p21">Page 21</option>
+								<option value="chp2_p22">Page 22</option>
+								<option value="chp2_p23">Page 23</option>
+								<option value="chp2_p24">Page 24</option>
+							</select>
+						</form>
+						
+						<div class="chapPreview">
+							<a href="chp2_p1.html"><br /><br /><br /><br /><br /><br />Cliquez pour commencer la lecture de ce chapitre.</a>
+							<img class="chapPreview" src="images/chapPreview/chp2.jpg" />
+						</div>
+					</td>
+					<td>
+						<h2>Chapitre 3</h2>
+						<form>
+							<select name="pageSelect" onchange="pageChapterSelect(this);" onfocus="this.blur()">
+								<option value="chp3_p1" selected="selected">Page 1</option>
+								<option value="chp3_p2">Page 2</option>
+								<option value="chp3_p3">Page 3</option>
+								<option value="chp3_p4">Page 4</option>
+								<option value="chp3_p5">Page 5</option>
+								<option value="chp3_p6">Page 6</option>
+								<option value="chp3_p7">Page 7</option>
+								<option value="chp3_p8">Page 8</option>
+								<option value="chp3_p9">Page 9</option>
+								<option value="chp3_p10">Page 10</option>
+								<option value="chp3_p11">Page 11</option>
+								<option value="chp3_p12">Page 12</option>
+								<option value="chp3_p13">Page 13</option>
+								<option value="chp3_p14">Page 14</option>
+								<option value="chp3_p15">Page 15</option>
+								<option value="chp3_p16">Page 16</option>
+								<option value="chp3_p17">Page 17</option>
+								<option value="chp3_p18">Page 18</option>
+								<option value="chp3_p19">Page 19</option>
+								<option value="chp3_p20">Page 20</option>
+								<option value="chp3_p21">Page 21</option>
+								<option value="chp3_p22">Page 22</option>
+								<option value="chp3_p23">Page 23</option>
+								<option value="chp3_p24">Page 24</option>
+								<option value="chp3_p25">Page 25</option>
+							</select>
+						</form>
+						
+						<div class="chapPreview">
+							<a href="chp3_p1.html"><br /><br /><br /><br /><br /><br />Cliquez pour commencer la lecture de ce chapitre.</a>
+							<img class="chapPreview" src="images/chapPreview/chp3.jpg" />
+						</div>
+					</td>
+				</tr>
+				
+				<tr> <!-- ligne 2 = chap 4,5,6-->
+				</tr>
+			</table>
+			
+			<br /><br />
+			<div class="tip" style="background-color:rgba(230,230,230,0.3);">
+				<p><img src="images/tip.png" style="height:35px;vertical-align:-10px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Vous ne trouvez pas la page que vous cherchez ? Essayez la barre de recherche juste à droite du menu !</p>
+			</div>
+			<br />
+			<a class="retour" href="javascript:history.back()">[← Retour]</a>
+			<br /><br /><br />
+		</div> <!-- fin Main -->
+		
+	<footer>
+		<span>© 2015 didjecte.byethost8.com - All rights reserved.</span>
+	</footer>
+	
+	<!-- ============= JS script ============= -->
+	
+	<script src="js/gallery.js"></script>
+	<script src="js/recherche.js"></script>
+	<script src="js/pageChapterSelect.js"></script>
+</body>
+	
+</html>

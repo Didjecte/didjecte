@@ -1,0 +1,150 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Didjecte - Accueil</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+	<link rel="stylesheet" type="text/css" href="css/sourcesanspro.css" />
+	<link rel="stylesheet" type="text/css" href="css/opensanscondensed.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css" />
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+
+
+
+</head>
+
+<body>
+	<div id="body_wrapper">
+		<div id="calque">
+		<header>
+			<!-- image gallerie -->
+			<img src="wallpapers/wallpaper_1.png" id="gallery_img">
+			
+			<!-- logo -->
+			<a href="index.html"><img src="images/logo.png" style="height:70px; margin-top:5px" /></a>
+
+			<!-- signup -->
+				<div class="popup" onClick="popup()">
+					<img src="images/signIn.png" style="height:70px;margin-top:5px;"/>
+				</div>	
+				<div class="popup">
+					<span class="popuptext" id="myPopup">
+						<form method="post" action="validation.php">
+							<div class="box">
+							<img src="images/croix.png" onClick="popup()" style="height:16px; width:16px; float:right;"/>
+							<h1>Login</h1>
+							<br/>
+
+							<input type="text" name="username" placeholder="Nom d'utilisateur" onFocus="field_focus(this, 'ID');" onblur="field_blur(this, 'ID'); " class="ID" />
+							  
+							<input type="password" name="password" placeholder="Password" onFocus="field_focus(this, 'password');" onblur="field_blur(this, 'password');" class="ID" />
+							<br>
+							<div>
+							<input type="submit" id="btn" value="Se connecter"> <!-- End Btn -->
+							<li>
+							<a href="#"><div id="btn2"> S'enregistrer</div></a> <!-- End Btn2 -->
+							</div>
+							<br/>
+							<p style="text-align: right; color:grey; font-size: 12px; margin-right: 20px;">Mot de passe oublié ? Alors clique <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank">ici</a>.</p>
+							</div> <!-- End Box -->
+						</form>
+
+					</span>
+				</div>
+			
+			<!-- gallerie -->
+			<menu>
+				<ul>
+					<li><a href="index.html" class="active-page">Accueil</a></li>
+					<li><a href="manga.html">Manga</a></li>	
+					<li><a href="auteur.html">Mot de l'auteur</a></li>
+					<li><a href="encyclopedie.html">Encyclopédie</a></li>
+					<li><a href="historique.html">Historique</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li id="recherche"><a id="recherche-a" onclick="clickRecherche()"><img src="images/loupe.png" height="15px" /></a></li>
+					<li id="recherche-deroule">
+						<script>
+  							(function() {
+ 							var cx = '007051934125326888592:u3xfemtxfxo';
+    						var gcse = document.createElement('script');
+  					  		gcse.type = 'text/javascript';
+    						gcse.async = true;
+    						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+    	    				'//cse.google.com/cse.js?cx=' + cx;
+    						var s = document.getElementsByTagName('script')[0];
+    						s.parentNode.insertBefore(gcse, s);
+  							})();
+						</script>
+						<gcse:search></gcse:search>
+					</li>
+				</ul>
+			</menu>
+		</header>
+		
+		<table id="gallery">
+			<tr>
+				<td id="g-left" onclick="prevImg()">⟨</td>
+				<td id="g-center">
+					<a href="didjecte_nouveau_site.html" style="display:inline-block; width: 100%; height: 100%;">
+						<div id="flash-info">
+							<div class="flash-info show">
+								<h3>À la une</h3>
+								<p>Le nouveau site de Didjecte est maintenant en ligne !</p>
+							</div>
+							<div class="flash-info">
+								<h3>[Titre 2]</h3>
+								<p>-------------[Info 2]-------------</p>
+							</div>
+							<div class="flash-info">
+								<h3>[Titre 3]</h3>
+								<p>-------------[Info 3]-------------</p>
+							</div>
+							<div class="flash-info">
+								<h3>[Titre 4]</h3>
+								<p>-------------[Info 4]-------------</p>
+							</div>
+						</div>
+					</a>
+				</td>
+				<td id="g-right" onclick="nextImg()">⟩</td>
+			</tr>
+		</table>
+	
+		<div id="main"> <!-- ============= MAIN ============= -->
+			<div id="cible"></div>
+			<table id="table-index-1">
+				<tr>
+					<td style="display: inline-block; width: 700px;">	
+				
+
+						<h2>Bienvenue, cher visiteur !</h2>
+						<p>Vous êtes sur le point de découvrir le monde de <i>Didjecte</i>, un manga qui vous emmène dans un imaginaire magique qui allie amitié et humour.</p>
+						<p>Nous sommes en l'an 8462. Après la quasi-extinction de l'humanité, la civilisation humaine a abandonné la super-technologie d'autrefois, et s'est tourné vers l'environnement pour enfin découvrir la magie. Cette dernière, qui pourtant est encore de l'ordre du fantastique de nos jours, finit par être enseignée dans la plupart des écoles primaires et secondaires, et à se mettre au service de l'humanité au quotidien.</p>
+						<p>Le héros de notre histoire est un jeune homme dénommé Didjecte, orphelin depuis son très jeune âge. Il mena alors une aventure extraordinaire et inédite avec ses amis...</p>
+						<br />
+						<p><a id="commencer_lecture" href="chp1_p1.html">&nbsp;> COMMENCER LA LECTURE&nbsp;</a></p>
+					</td>
+					<td style="display: inline-block; float: right;">
+						<img style="height:400px; margin-left: 0px" src="images/didjectecestlui.png"/>
+					</td>
+				</tr>
+			</table>
+			<br /><br /><br /><br /><br /><br />
+		</div> <!-- fin Main -->
+		</div> <!--fin calque-->
+	</div> <!-- fin body wrapper -->
+	
+	<footer>
+		<span>© 2015 didjecte.byethost8.com - All rights reserved.</span>
+	</footer>
+	
+	<!-- ============= JS script ============= -->
+	
+	<script src="js/recherche.js"></script>
+	<script src="js/gallery.js"></script>
+	<script src="js/signin.js"></script>
+
+</body>
+	
+</html>

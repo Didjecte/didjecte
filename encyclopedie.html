@@ -1,0 +1,206 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Didjecte - Encyclopédie</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<link rel="stylesheet" type="text/css" href="css/sourcesanspro.css" />
+	<link rel="stylesheet" type="text/css" href="css/opensanscondensed.css">
+	<style>
+		.block-clickable td
+		{
+			height: 220px; /* 220 */
+			width: 190px;
+			border: 1px solid black;
+			padding-left: 0px;
+			border-radius: 5px;
+		}
+		
+		.block-clickable
+		{
+			border-spacing: 50px;
+		}
+		
+		.block-clickable tbody
+		{
+			height: 220px;
+			padding: 0;
+		}
+		
+		ul.dashed li
+		{
+			font-size: 19px;
+		}
+		/*
+		ul
+		{
+			margin: 0;
+		}
+		
+		ul.dashed
+		{
+			list-style-type: none;
+		}
+		
+		ul.dashed > li
+		{
+			text-indent: -5px;
+		}
+		
+		ul.dashed > li:before
+		{
+			content: "-";
+			text-indent: -5px;
+		}
+		
+		
+		ul.dashed
+		{
+    		list-style-type: none;
+    		margin-left: 0;
+		    padding-left: 1em;
+		}
+
+		ul.dashed > li:before
+		{
+    		display: inline-block;
+    		content: "-";
+		    margin-left: 1em;
+		}
+		*/
+		
+		ul.dashed
+		{
+			list-style: none;
+		    margin-left: 0;
+		    padding-left: 60px;
+		    margin-top: 0px;
+		}
+		
+		ul.dashed > li:before
+		{
+			display: inline-block;
+			content: "-";
+			width: 20px;
+			margin-left: -30px;
+			margin-top: 5px;
+		}
+		
+		table.block-clickable tr td
+		{
+			overflow: hidden;
+		}
+		
+		table.block-clickable tr td a
+		{
+			height: 102%;
+			width: 102%;
+			display: block;
+		}
+		
+		table.block-clickable tr td a:hover
+		{
+			background-color: rgba(0,0,0,0.3);
+			cursor: pointer;
+			
+			transition: background-color 0.3s;
+			-webkit-transition: background-color 0.3s;
+		}
+		
+		table.block-clickable tr td a
+		{
+			background-color: rgba(0,0,0,0);
+			cursor: pointer;
+			
+			transition: background-color 0.2s;
+			-webkit-transition: background-color 0.2s;
+		}
+		
+		/*
+		table.block-clickable tr td:hover
+		{
+			background-color: red;
+			cursor: pointer;
+		}
+		*/
+	</style>
+</head>
+
+<body>
+		<header>
+			<!-- logo -->
+			<a href="index.html"><img src="images/logo.png" id="img_gallery" style="height:70px; margin-bottom:5px" /></a>
+			
+			<!-- gallerie -->
+			<menu>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="manga.html">Manga</a></li>
+					<li><a href="auteur.html">Mot de l'auteur</a></li>
+					<li><a href="encyclopedie.html" class="active-page">Encyclopédie</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li id="recherche"><a id="recherche-a" onclick="clickRecherche()"><img src="images/loupe.png" height="15px" /></a></li>
+					<li id="recherche-deroule">
+						<script>
+  							(function() {
+ 							var cx = '007051934125326888592:u3xfemtxfxo';
+    						var gcse = document.createElement('script');
+  					  		gcse.type = 'text/javascript';
+    						gcse.async = true;
+    						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+    	    				'//cse.google.com/cse.js?cx=' + cx;
+    						var s = document.getElementsByTagName('script')[0];
+    						s.parentNode.insertBefore(gcse, s);
+  							})();
+						</script>
+						<gcse:search></gcse:search>
+					</li>
+				</ul>
+			</menu>
+		</header>
+	
+		<div id="main"> <!-- ============= MAIN ============= -->	
+			<h2>Encyclopédie</h2>
+			<p style="margin-bottom:10px;">Bienvenue dans l'encyclopédie de Didjecte. Cette section du site est réservée à des informations complémentaires sur l'univers de Didjecte. Vous trouverez ici en particulier :</p>
+			<ul class="dashed">
+				<li>le <b>bestiaire</b>, qui recueille l'ensemble des animaux et monstres présents dans le manga</li>
+				<li>les <b>sorts</b>, véritables coups de magie, souvent utilisés comme attaque.</li>
+				<li><a href="minijeu.html">Accéder au mini-jeu!</a></li>
+			</ul>
+			<p style="font-style:italic;">Cliquez sur un icône pour accéder à la page correspondante.</p>
+			
+			<!-- <div class="block-clickable">
+				<img src="img/bestiaire.png" style="height:120px;width:90px;border:1px solid black;" /><br />
+				<span style="align:center">Bestiaire</span>
+			</div>
+			
+			<div class="block-clickable">
+			</div>
+			-->
+			<table class="block-clickable" cellspacing="0">
+				<tbody>
+				<tr>
+					<td style="background-image:url('images/didjectecestpaslui.png')"><a></a></td>
+					<td style="background-image:url('images/didjectecestpaslui.png')"><a></a></td>
+				</tr>
+				</tbody>
+			</table>
+	
+			<br />
+			<a class="retour" href="javascript:history.back()">[← Retour]</a>
+			<br /><br />
+		</div> <!-- fin Main -->
+		
+	<footer>
+		<span>© 2015 didjecte.byethost8.com - All rights reserved.</span>
+	</footer>
+	
+	<!-- ============= JS script ============= -->
+	
+	<script src="js/gallery.js"></script>
+	<script src="js/recherche.js"></script>
+	<script src="js/pageChapterSelect.js"></script>
+</body>
+
+</html>

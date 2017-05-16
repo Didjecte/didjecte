@@ -1,0 +1,118 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Didjecte - Contact</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<link rel="stylesheet" type="text/css" href="css/sourcesanspro.css" />
+	<link rel="stylesheet" type="text/css" href="css/opensanscondensed.css">
+</head>
+
+<body>
+		<header>
+			<!-- logo -->
+			<a href="index.html"><img src="images/logo.png" id="img_gallery" style="height:70px; margin-bottom:5px" /></a>
+			
+			<!-- gallerie -->
+			<menu>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="manga.html">Manga</a></li>
+					<li><a href="auteur.html">Mot de l'auteur</a></li>
+					<li><a href="encyclopedie.html">Encyclopédie</a></li>
+					<li><a href="contact.html" class="active-page">Contact</a></li>
+					<li id="recherche"><a id="recherche-a" onclick="clickRecherche()"><img src="images/loupe.png" height="15px" /></a></li>
+					<li id="recherche-deroule">
+						<script>
+  							(function() {
+ 							var cx = '007051934125326888592:u3xfemtxfxo';
+    						var gcse = document.createElement('script');
+  					  		gcse.type = 'text/javascript';
+    						gcse.async = true;
+    						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+    	    				'//cse.google.com/cse.js?cx=' + cx;
+    						var s = document.getElementsByTagName('script')[0];
+    						s.parentNode.insertBefore(gcse, s);
+  							})();
+						</script>
+						<gcse:search></gcse:search>
+					</li>
+				</ul>
+			</menu>
+		</header>
+	
+		<div id="main"> <!-- ============= MAIN ============= -->
+		
+		<style>
+			div.contact
+			{
+				padding-top: 20px;
+				padding-left: 140px;
+				height: 310px;
+				margin-bottom: 50px;
+			}
+			
+			div.contact div
+			{
+				height: 250px;
+				width: 300px;
+				/*border: 3px solid rgba(80,140,140,0.7); */ border: 3px solid rgba(240,140,80,0.7);
+				background-color: rgba(240,180,120,0);
+				border-radius: 10px;
+				
+				padding: 20px 20px 10px 20px;
+				
+				font-size: 18px;
+				
+				display: inline-block;
+				position: relative;
+			}
+			
+			div.contact div:hover
+			{
+				border: 3px solid rgba(240,140,80,0.7);
+				background-color: rgba(240,180,120,0.2);
+				/*border: 3px solid rgba(80,140,140,0.7);
+				background-color: rgba(80,140,140,0.7);*/
+			}
+		</style>
+		
+			<h2>Contact</h2>
+			<p>Vous avez des conseils, des suggestions, des questions particulières ou des fautes à signaler ? N'hésitez pas à prendre contact avec nous, nous nous efforcerons alors de vous répondre dans les plus brefs délais.</p>
+			<p>Pour cela, vous avez la possibilité de :</p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;utiliser le Tchat mis à votre disposition en bas à droite de chaque page du site&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/chat_icon.png" style="width:35px;vertical-align:-8px;" /></p>
+			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp;nous envoyer un mail à l'adresse suivante : <a href="mailto:didjecte.notification@gmail.com">didjecte.notification@gmail.com</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/mail_icon.png" style="width:35px;vertical-align:-8px;" /></p>
+			<p></p>
+			<!--
+			<div class="contact">
+				<div style="top:-50px;">Utiliser le chat mis à votre disposition en bas à droite de chaque page du site<br /><br /><br /><img src="images/chat_icon.png" style="width:30%;margin-left:34%;" /></div>
+				<span>&nbsp;&nbsp;- et/ou -&nbsp;&nbsp;</span>
+				<div>Nous envoyer un mail sur l'adresse suivante : <br /><br /><center><a href="mailto:didjecte.notification@gmail.com">didjecte.notification@gmail.com</a></center><br /><br /><img src="images/mail_icon.png" style="width:30%;margin-left:35%;" /></div>
+			</div>
+			<br />
+			<button onclick="var machin = document.execCommand('copy');alert(machin)">Test</button>
+			<br />-->
+			<br />
+			<h3 style="font-weight:300;font-size:25px;color:rgba(80,80,80,0.8);">De la même équipe</h3>
+			<p>Le <a href="didjecte.0lx.net">guide shinobi.fr</a>, guide pratique pour le jeu en ligne <a href="shinobi.fr">shinobi.fr</a>.</p>
+			<br />
+			<h3 style="font-weight:300;font-size:25px;color:rgba(80,80,80,0.8);">Partenariats</h3>
+			<p>L'<a href="hannuaire.fr">Hannuaire</a>.</p>
+			<br />
+			<a class="retour" href="javascript:history.back()">[← Retour]</a>
+			<br /><br />
+		</div> <!-- fin Main -->
+		
+	<footer>
+		<span>© 2015 didjecte.byethost8.com - All rights reserved.</span>
+	</footer>
+	
+	<!-- ============= JS script ============= -->
+	
+	<script src="js/gallery.js"></script>
+	<script src="js/recherche.js"></script>
+	<script src="js/pageChapterSelect.js"></script>
+</body>
+	
+</html>

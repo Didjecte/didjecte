@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Didjecte - Lecture en ligne - Didjecte 01 - Page 24</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<link rel="stylesheet" type="text/css" href="css/sourcesanspro.css" />
+	<link rel="stylesheet" type="text/css" href="css/opensanscondensed.css">
+</head>
+
+<body>
+		<header>
+			<!-- logo -->
+			<a href="index.html"><img src="images/logo.png" id="img_gallery" style="height:70px; margin-bottom:5px" /></a>
+			
+			<!-- gallerie -->
+			<menu>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="manga.html" class="active-page">Manga</a></li>
+					<li><a href="auteur.html">Mot de l'auteur</a></li>
+					<li><a href="encyclopedie.html">Encyclopédie</a></li>
+					<li><a href="historique.html">Historique</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li id="recherche"><a id="recherche-a" onclick="clickRecherche()"><img src="images/loupe.png" height="15px" /></a></li>
+					<li id="recherche-deroule"><input id="recherche-input" onblur="fermeRecherche()" /></li>
+				</ul>
+			</menu>
+		</header>
+	
+		<div id="main"> <!-- ============= MAIN ============= -->			
+			<h2 id="lectureChapPageNumber">Chapitre 1&nbsp;&nbsp;<span class="lecturePageNumber">·&nbsp;&nbsp;Page 24</span></h2>
+			<br />
+			<form style="width:100%;height:25px;">
+				<select id="chapterNumber" onchange="quickChapterSelect()" onfocus="this.blur()">
+					<option value="chp1">Chapitre 1</option>
+					<option value="chp2">Chapitre 2</option>
+					<option value="chp3">Chapitre 3</option>
+					<option value="chp4">Chapitre 4</option>
+					<option value="chp5">Chapitre 5</option>
+				</select>
+
+				<select id="pageNumber" onchange="quickPageSelect()" onfocus="this.blur()">
+					<option value="p1">Page 1</option>
+					<option value="p2">Page 2</option>
+					<option value="p3">Page 3</option>
+					<option value="p4">Page 4</option>
+					<option value="p5">Page 5</option>
+					<option value="p6">Page 6</option>
+					<option value="p7">Page 7</option>
+					<option value="p8">Page 8</option>
+					<option value="p9">Page 9</option>
+					<option value="p10">Page 10</option>
+					<option value="p11">Page 11</option>
+					<option value="p12">Page 12</option>
+					<option value="p13">Page 13</option>
+					<option value="p14">Page 14</option>
+					<option value="p15">Page 15</option>
+					<option value="p16">Page 16</option>
+					<option value="p17">Page 17</option>
+					<option value="p18">Page 18</option>
+					<option value="p19">Page 19</option>
+					<option value="p20">Page 20</option>
+					<option value="p21">Page 21</option>
+					<option value="p22">Page 22</option>
+					<option value="p23">Page 23</option>
+					<option value="p24">Page 24</option>	
+				</select>
+				<div class="quickFlipPage">
+				<a href="javascript:prevPage()"> Précédent </a>
+				<a href="javascript:nextPage()"> Suivant </a>
+			</div>
+			</form>
+			<br />
+			<a id="pageImg" href="javascript:nextPage()"><img src="didjecte-manga/chp1/chpt1_p24.jpg" /></a>
+			<br /><br />
+			<div class="quickFlipPage">
+				<a href="javascript:prevPage()"> Précédent </a>
+				<a href="javascript:nextPage()"> Suivant </a>
+			</div>
+			<br /><br /><br />
+			<div class="tip">
+				<p><img id="tip1" src="images/tip.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-style:normal">Astuce : </span>pour changer de page, cliquez sur l'image ou utilisez simplement les flèches de votre clavier. <img id="keyboard_arrows" src="images/keyboard_arrows.png" /></p>
+			</div>
+			<br /><br />
+			<a class="retour" href="manga.html">[← Retour à la page "manga"]</a>
+			<br /><br />
+		</div> <!-- fin Main -->
+		
+	<footer>
+		<span>© 2015 didjecte.byethost8.com - All rights reserved.</span>
+	</footer>
+	
+	<!-- ============= JS script ============= -->
+	
+	<script src="js/recherche.js"></script>
+	
+	<script>
+		var chapterLastPage = 24; //chap 1
+		var prevChapterLastPage = 0;
+		var lastChapterNumber = 5; //5 chapitres sortis pour l'instant
+	</script>
+	
+	<script src="js/pageChapterSelect.js"></script>	
+	<script>
+		window.onload = resetSelect('chp1','p24');
+	</script>
+</body>
+	
+</html>

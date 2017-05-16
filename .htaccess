@@ -1,0 +1,3 @@
+AddType application/x-httpd-php .html
+
+ErrorDocument 404 http://localhost/404.html	

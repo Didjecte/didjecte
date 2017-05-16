@@ -1,0 +1,269 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Didjecte - Lecture en ligne - Didjecte 01 - Page 1</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="../../css/style2.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/sourcesanspro.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/opensanscondensed.css">
+</head>
+
+<body>
+		<header>
+			<!-- logo -->
+			<a href="index.html"><img src="../../images/logo.png" id="img_gallery" style="height:70px; margin-bottom:5px" /></a>
+			
+			<!-- gallerie -->
+			<menu>
+				<ul>
+					<li><a href="../../index.html">Accueil</a></li>
+					<li><a href="../../manga.html" class="active-page">Manga</a></li>
+					<li><a href="../../auteur.html">Mot de l'auteur</a></li>
+					<li><a href="../../encyclopedie.html">Encyclopédie</a></li>
+					<li><a href="../../historique.html">Historique</a></li>
+					<li><a href="../../contact.html">Contact</a></li>
+					<li id="recherche"><a id="recherche-a" onclick="clickRecherche()"><img src="../../images/loupe.png" height="15px" /></a></li>
+					<li id="recherche-deroule"><input id="recherche-input" onblur="fermeRecherche()" /></li>
+				</ul>
+			</menu>
+		</header>
+	
+		<div id="main"> <!-- ============= MAIN ============= -->
+			<style>
+				.tip
+				{
+					border: 1px solid rgb(29,175,236);
+					border-radius: 5px;
+					padding: 10px 15px 11px 15px;
+					font-style: italic;
+					font-weight: 300;
+					
+					color: rgba(80,80,80,0.9);
+					
+					background-color: rgba(210,210,210,0.3); /* rgba(230,230,230,0.3) */
+				}
+
+				.tip p
+				{
+					margin: 0;
+					font-size: 18px;
+				}
+				
+				#lectureChapPageNumber
+				{
+					text-align: center;
+					font-style: normal;
+					color: black;
+					font-size: 30px;
+				}
+				
+				.lecturePageNumber
+				{
+					font-weight: 200 !important;
+					color: rgba(100,100,100,0.8);
+				}
+				
+				a#pageImg
+				{
+					width: 80%;
+					margin-left: 9%;
+					display: inline-block;
+				}
+				
+				a#pageImg > img
+				{
+					width: 100%;
+				}
+				
+				div.tip img#tip1
+				{
+					height: 35px;
+					vertical-align: -10px;
+				}
+				
+				div.tip img#keyboard_arrows
+				{
+					height: 55px;
+					vertical-align: -20px;
+					margin-left: 40px;
+				}
+				
+				div.quickFlipPage
+				{
+					float: right;
+					height: 30px;
+					border: none;
+					
+					position: relative;
+					top: -5px;
+					right: -6px;
+					
+					/*padding: 5px 10px 15px 80px;
+					
+					transition: padding 0.4s;
+					-webkit-transition: padding 0.4s;
+					-moz-transition: padding 0.4s;
+					-o-transition: padding 0.4s;
+					*/
+				}
+				/*
+				div.quickFlipPage:hover
+				{
+					padding: 5px 10px 15px 5px;
+					
+					transition: padding 0.3s;
+					-webkit-transition: padding 0.3s;
+					-moz-transition: padding 0.3s;
+					-o-transition: padding 0.3s;
+				}
+				*/
+				.quickFlipPage a
+				{
+					display: inline-block;
+					height: 27px;
+					/*width: 28px;*/
+					/*border: 1px solid rgba(180,180,180,0.8);*/
+					border-radius: 15px;
+					text-align: center;
+					
+					/*color: rgba(180,180,180,0);*/
+					
+					padding-top: 0px;
+					margin-bottom: 0px;
+					margin-left: 5px;
+					
+					font-family: 'Open Sans Condensed';
+					font-size: 20px;				
+					
+					text-decoration: none;
+					background-color: rgba(50,150,250,0.8);
+					border: 1px solid rgba(50,150,250,0.8);
+					color: white;
+					
+					width: 80px;
+					
+					transition: background-color 0.2s, border 0.2s;
+					-webkit-transition: background-color 0.2s, border 0.2s;
+					-moz-transition: background-color 0.2s, border 0.2s;
+					-o-transition: background-color 0.2s, border 0.2s;
+					
+					/*
+					transition: background-color 0.2s, border 0.2s, color 0.2s, width 0.4s;
+					-webkit-transition: background-color 0.2s, border 0.2s, color 0.2s, width 0.4s;
+					-moz-transition: background-color 0.2s, border 0.2s, color 0.2s, width 0.4s;
+					-o-transition: background-color 0.2s, border 0.2s, color 0.2s, width 0.4s;
+					
+					transition: background-color 0.2s 0.2s, border 0.2s 0.2s, color 0.2s 0.2s, width 0.4s 0.2s;
+					-webkit-transition: background-color 0.2s 0.2s, border 0.2s 0.2s, color 0.2s 0.2s, width 0.4s 0.2s;
+					-moz-transition: background-color 0.2s 0.2s, border 0.2s 0.2s, color 0.2s 0.2s, width 0.4s 0.2s;
+					-o-transition: background-color 0.2s 0.2s, border 0.2s 0.2s, color 0.2s 0.2s, width 0.4s 0.2s;
+					*/
+				}
+				/*
+				.quickFlipPage:hover > a
+				{
+					text-decoration: none;
+					background-color: rgba(50,150,250,0.8);
+					border: 1px solid rgba(50,150,250,0.8);
+					color: white;
+					
+					width: 80px;
+					
+					transition: background-color 0.2s, border 0.2s, color 0.2s, width 0.3s;
+					-webkit-transition: background-color 0.2s, border 0.2s, color 0.2s, width 0.3s;
+					-moz-transition: background-color 0.2s, border 0.2s, color 0.2s, width 0.3s;
+					-o-transition: background-color 0.2s, border 0.2s, color 0.2s, width 0.3s;
+				}
+				*/
+				.quickFlipPage > a:hover
+				{
+					background-color: rgba(20,120,230,1);
+					border: 1px solid rgba(20,120,230,1);
+					
+					transition: background-color 0.2s, border 0.2s;
+					-webkit-transition: background-color 0.2s, border 0.2s;
+					-moz-transition: background-color 0.2s, border 0.2s;
+					-o-transition: background-color 0.2s, border 0.2s;
+				}
+			</style>
+			
+			<h2 id="lectureChapPageNumber">Chapitre 1&nbsp;&nbsp;<span class="lecturePageNumber">·&nbsp;&nbsp;Page 1</span></h2>
+			<br />
+			<form style="width:100%;height:25px;">
+				<select id="chapterNumber" onchange="quickChapterSelect()" onfocus="this.blur()">
+					<option value="chp1">Chapitre 1</option>
+					<option value="chp2">Chapitre 2</option>
+					<option value="chp3">Chapitre 3</option>
+					<option value="chp4">Chapitre 4</option>
+					<option value="chp5">Chapitre 5</option>
+				</select>
+
+				<select id="pageNumber" onchange="quickPageSelect()" onfocus="this.blur()">
+					<option value="p1">Page 1</option>
+					<option value="p2">Page 2</option>
+					<option value="p3">Page 3</option>
+					<option value="p4">Page 4</option>
+					<option value="p5">Page 5</option>
+					<option value="p6">Page 6</option>
+					<option value="p7">Page 7</option>
+					<option value="p8">Page 8</option>
+					<option value="p9">Page 9</option>
+					<option value="p10">Page 10</option>
+					<option value="p11">Page 11</option>
+					<option value="p12">Page 12</option>
+					<option value="p13">Page 13</option>
+					<option value="p14">Page 14</option>
+					<option value="p15">Page 15</option>
+					<option value="p16">Page 16</option>
+					<option value="p17">Page 17</option>
+					<option value="p18">Page 18</option>
+					<option value="p19">Page 19</option>
+					<option value="p20">Page 20</option>
+					<option value="p21">Page 21</option>
+					<option value="p22">Page 22</option>
+					<option value="p23">Page 23</option>
+					<option value="p24">Page 24</option>	
+				</select>
+				<div class="quickFlipPage">
+				<a href="javascript:prevPage()"> Précédent </a>
+				<a href="javascript:nextPage()"> Suivant </a>
+			</div>
+			</form>
+			<br />
+			<a id="pageImg" href="javascript:nextPage()"><img src="../../didjecte-manga/chp1/chpt1_p1.jpg" /></a>
+			<br /><br />
+			<div class="quickFlipPage">
+				<a href="javascript:prevPage()"> Précédent </a>
+				<a href="javascript:nextPage()"> Suivant </a>
+			</div>
+			<br /><br /><br />
+			<div class="tip">
+				<p><img id="tip1" src="../../images/tip.png">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-style:normal">Astuce : </span>pour changer de page, cliquez sur l'image ou utilisez simplement les flèches de votre clavier. <img id="keyboard_arrows" src="../../images/keyboard_arrows.png" /></p>
+			</div>
+			<br /><br />
+			<a class="retour" href="../../manga.html">[← Retour à la page "manga"]</a>
+			<br /><br />
+		</div> <!-- fin Main -->
+		
+	<footer>
+		<span>© 2015 didjecte.byethost8.com - All rights reserved.</span>
+	</footer>
+	
+	<!-- ============= JS script ============= -->
+	
+	<script src="../../js/recherche.js"></script>
+	
+	<script>
+		var chapterLastPage = 24; //chap 1
+		var prevChapterLastPage = 0;
+		var lastChapterNumber = 5; //5 chapitres sortis pour l'instant
+	</script>
+	
+	<script src="../../js/pageChapterSelect.js"></script>	
+	<script>
+		window.onload = resetSelect('chp1','p1');
+	</script>
+</body>
+	
+</html>

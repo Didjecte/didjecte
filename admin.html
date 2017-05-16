@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+
+<head>
+	<title>Didjecte - Admin</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="css/style2.css" />
+	<link rel="stylesheet" type="text/css" href="css/sourcesanspro.css" />
+	<link rel="stylesheet" type="text/css" href="css/opensanscondensed.css">
+	<link rel="stylesheet" type="text/css" href="css/popup.css" />
+	<link rel="icon" type="image/png" sizes="96x96" href="images/favicon.png">
+</head>
+
+<body>
+		<header>
+			<!-- logo -->
+			<a href="index.html"><img src="images/logo.png" id="img_gallery" style="height:70px; margin-top:5px" /></a>
+			
+			<!-- gallerie -->
+			<menu>
+				<ul>
+					<li><a href="index.html">Accueil</a></li>
+					<li><a href="manga.html" class="active-page">Manga</a></li>
+					<li><a href="auteur.html">Mot de l'auteur</a></li>
+					<li><a href="encyclopedie.html">Encyclopédie</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li id="recherche"><a id="recherche-a" onclick="clickRecherche()"><img src="images/loupe.png" height="15px" /></a></li>
+					<li id="recherche-deroule">
+						<script>
+  							(function() {
+ 							var cx = '007051934125326888592:u3xfemtxfxo';
+    						var gcse = document.createElement('script');
+  					  		gcse.type = 'text/javascript';
+    						gcse.async = true;
+    						gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+    	    				'//cse.google.com/cse.js?cx=' + cx;
+    						var s = document.getElementsByTagName('script')[0];
+    						s.parentNode.insertBefore(gcse, s);
+  							})();
+						</script>
+						<gcse:search></gcse:search>
+					</li>
+				</ul>
+			</menu>
+		</header>
+	
+		<div id="main"> <!-- ============= MAIN ============= -->			
+			<h2>Mot de l'auteur</h2>
+			<p>Rajouter un mot de l'auteur.</p>
+			
+			<h2>Chat</h2>
+			<p>Gérer le Chatbox.</p>
+			
+			<h2>Chapitres</h2>
+			<p>Gérer les chapitres et le Chatbox.</p>
+
+
+			<table id="chapSelect" align="center">
+				<tr> <!-- ligne 1 = chap 1,2,3-->
+					<td style="border-right: 1px solid rgba(180,180,180,0);">
+						
+					</td>
+				</tr>
+				
+				<tr> <!-- ligne 2 = chap 4,5,6-->
+				</tr>
+			</table>
+			
+			<br /><br />
+
+			<br />
+			<a class="retour" href="javascript:history.back()">[← Retour]</a>
+			<br /><br /><br />
+		</div> <!-- fin Main -->
+		
+	<footer>
+		<span>© 2015 didjecte.byethost8.com - All rights reserved.</span>
+	</footer>
+	
+	<!-- ============= JS script ============= -->
+	
+	<script src="js/gallery.js"></script>
+	<script src="js/recherche.js"></script>
+	<script src="js/pageChapterSelect.js"></script>
+</body>
+	
+</html>
